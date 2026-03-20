@@ -1,57 +1,256 @@
-<!DOCTYPE >
+<!doctype html>
 <html>
-  <head lang="en">
-    <meta charset="utf-8" />
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <link href="./src/output.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="layout">
-      <div class="header">
-        <p>Portfolio</p>
+
+<head lang="en">
+  <meta charset="utf-8" />
+  <meta charset="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./portfolioIcon.png" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <link href="./src/output.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div class="layout">
+    <div class="header">
+      <p>Portfolio</p>
+      <nav>
         <ul class="navbar">
-          <li>Home</li>
-          <li>About</li>
-          <li>Skill</li>
-          <li>Project</li>
-          <li>Contact</li>
+          <a href="#home">
+            <li>Home</li>
+          </a>
+          <a href="#project">
+            <li>Project</li>
+          </a>
+          <a href="#skill">
+            <li>Skill</li>
+          </a>
+          <a href="#education">
+            <li>Education</li>
+          </a>
+          <a href="#contact">
+            <li>Contact</li>
+          </a>
         </ul>
-      </div>
-      <div class="layout-1" data-aos="fade-up" data-aos-easing="ease-in-out">
-        <div class="Intro">
-          <p>
-            Hi,
-            <span class="intro-name">I am Vyrak</span>
-            <br /><span class="intro-desc">
-              A tech enthusiast passionate about emerging technologies,
-              problem-solving, and continuous learning. I enjoy turning ideas
-              into practical solutions and collaborating to achieve meaningful
-              results.
-            </span>
-          </p>
-          <button
-            class="btn-contact bg-amber-600 rounded-sm p-[8px] text-amber-50 font-black hover:cursor-pointer"
-          >
-            Contact
-          </button>
+      </nav>
+    </div>
+    <div class="layout-1" data-aos="fade-up" data-aos-easing="ease-in-out">
+      <div class="intro">
+        <p>
+          Hello, my name
+          <span class="intro-name">is Vyrak</span>
+          <span class="intro-desc">
+            A tech enthusiast passionate about emerging technologies,
+            problem-solving, and continuous learning. I enjoy turning ideas
+            into practical solutions and collaborating to achieve meaningful
+            results.
+          </span>
+        </p>
+        <div class="quick-btn">
+          <a href="#project">
+            <button class="btn-project bg-amber-600 rounded-sm p-[8px] text-amber-50 font-black hover:cursor-pointer">
+              View Projects
+            </button>
+          </a>
+          <a href="#contact">
+            <button class="btn-contact bg-amber-600 rounded-sm p-[8px] text-amber-50 font-black hover:cursor-pointer">
+              Contact Me
+            </button>
+          </a>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-easing="ease-in-out" class="layout-2">
-        Second Layout
+    </div>
+    <section id="project">
+      <div class="layout-2">
+        <p class="title-layout">Projects</p>
+        <span class="about-desc">A selection of projects that showcase my skills in programming,
+          problem-solving, and building real-world applications.
+        </span>
+        <div class="card-layout" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out"
+          data-aos-anchor-placement="top-center">
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+          <div class="card-style">
+            <p class="card-title">Book Library</p>
+            <div class="card-img">
+              <img src="./uhm.jpg" alt="" />
+            </div>
+            <div class="card-header">
+              <span style="font-weight: bold; font-size: 25px" class="card-title-desc">Description</span>
+              <p class="card-desc">
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- <p
+    </section>
+    <section id="skill">
+      <div class="layout-3">
+        <p class="title-layout" style="color: #c45a00; font-size: 50px">
+          Skills and Technologies
+        </p>
+        <span class="about-desc" style="color: #c45a00">A selection of projects that showcase my skills in programming,
+          problem-solving, and building real-world applications.
+        </span>
+        <div class="card-layout">
+          <div class="card-skill">
+            <p class="card-title" style="align-self: center">
+              Technology Stacks
+            </p>
+            <ul class="skill-sets">
+              <li><i class="fa-brands fa-react"></i> React.js</li>
+              <li><i class="fa-solid fa-wind"></i> Tailwindcss</li>
+              <li><i class="fa-brands fa-sass"></i> SASS</li>
+              <li><i class="fa-brands fa-js"></i> Javascript</li>
+              <li><i class="fa-brands fa-laravel"></i> Laravel</li>
+              <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+              <li><i class="fa-brands fa-python"></i> Flask</li>
+              <li>
+                <i class="fa-solid fa-mobile-screen-button"></i> Flutter
+              </li>
+              <li><i class="fa-solid fa-server"></i> Nginx</li>
+              <li><i class="fa-solid fa-database"></i> MySQL/Postgres</li>
+            </ul>
+          </div>
+          <div class="card-skill">
+            <p class="card-title" style="align-self: center">Soft Skills</p>
+            <ul class="skill-sets">
+              <li><i class="fa-solid fa-lightbulb"></i> Problem-solving</li>
+              <li><i class="fa-solid fa-crown"></i> Leadership</li>
+              <li><i class="fa-solid fa-comments"></i> Communication</li>
+              <li>
+                <i class="fa-solid fa-diagram-project"></i> Project Management
+              </li>
+              <li><i class="fa-solid fa-bullseye"></i> Self-discipline</li>
+              <li><i class="fa-solid fa-clock"></i> Time/Task Management</li>
+              <li><i class="fa-solid fa-brain"></i> Thinking skills</li>
+              <li>
+                <i class="fa-solid fa-user-tie"></i> Professional
+                Communication
+              </li>
+            </ul>
+          </div>
+          <div class="card-skill">
+            <p class="card-title" style="align-self: center">
+              Language Skills
+            </p>
+            <ul class="skill-sets">
+              <li><i class="fa-solid fa-language"></i> English</li>
+              <li>
+                <i class="fa-solid fa-earth-asia"></i> Khmer (Mother Tongue)
+              </li>
+            </ul>
+          </div>
+          <div class="card-skill">
+            <p class="card-title" style="align-self: center">Other Skills</p>
+            <ul class="skill-sets">
+              <li><i class="fa-solid fa-file-word"></i> Microsoft Offices</li>
+              <li><i class="fa-solid fa-chart-line"></i> Data Analyst</li>
+              <li><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</li>
+              <li><i class="fa-brands fa-windows"></i> Window Application</li>
+              <li>
+                <i class="fa-solid fa-person-chalkboard"></i> Presentation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="layout-4">The</div>
+    </section>
+    <!-- <p
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-easing="ease-in-out"
       data-aos-anchor-placement="top-center"
     ></p> -->
-      <!-- <div class="layout-1">Wow</div> -->
-    </div>
-  </body>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- <div class="layout-1">Wow</div> -->
+  </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </html>
