@@ -19,28 +19,30 @@
 
 <body>
   <div class="layout" id="home">
-    <div class="header">
-      <p>Portfolio</p>
-      <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>
-      <nav class="nav-menu">
-        <ul class="navbar">
-          <a href="#home">
-            <li>Home</li>
-          </a>
-          <a href="#project">
-            <li>Project</li>
-          </a>
-          <a href="#skill">
-            <li>Skill</li>
-          </a>
-          <a href="#education">
-            <li>Education</li>
-          </a>
-          <a href="#contact">
-            <li>Contact</li>
-          </a>
-        </ul>
-      </nav>
+    <div class="header-wrapper">
+      <div class="header">
+        <p>Portfolio</p>
+        <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>
+        <nav class="nav-menu">
+          <ul class="navbar">
+            <a href="#home">
+              <li>Home</li>
+            </a>
+            <a href="#project">
+              <li>Project</li>
+            </a>
+            <a href="#skill">
+              <li>Skill</li>
+            </a>
+            <a href="#education">
+              <li>Education</li>
+            </a>
+            <a href="#contact">
+              <li>Contact</li>
+            </a>
+          </ul>
+        </nav>
+      </div>
     </div>
     <div class="layout-1" data-aos="fade-up" data-aos-easing="ease-in-out">
       <div class="intro">
@@ -260,59 +262,188 @@
         </div>
         <div class="skill-card-layout">
           <div class="card-skill" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="card-title">
-              <i class="fa-solid fa-code"></i> Technology Stacks
-            </h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-brands fa-react"></i> React.js</span>
-              <span class="skill-tag"><i class="fa-solid fa-wind"></i> Tailwindcss</span>
-              <span class="skill-tag"><i class="fa-brands fa-sass"></i> SASS</span>
-              <span class="skill-tag"><i class="fa-brands fa-js"></i> Javascript</span>
-              <span class="skill-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
-              <span class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
-              <span class="skill-tag"><i class="fa-brands fa-python"></i> Flask</span>
-              <span class="skill-tag"><i class="fa-solid fa-mobile-screen-button"></i>
-                Flutter</span>
-              <span class="skill-tag"><i class="fa-solid fa-server"></i> Nginx</span>
-              <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL / Postgres</span>
+            <h3 class="card-title"><i class="fa-solid fa-code"></i> Technology Stacks</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-react"></i> React.js</span><span>85%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-wind"></i> Tailwindcss</span><span>90%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-sass"></i> SASS</span><span>80%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-js"></i> Javascript</span><span>90%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-laravel"></i> Laravel</span><span>60%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 60%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-node-js"></i> Node.js</span><span>75%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-python"></i> Flask</span><span>70%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-mobile-screen-button"></i>
+                    Flutter</span><span>75%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-server"></i> Nginx</span><span>65%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 65%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-database"></i> MySQL /
+                    Postgres</span><span>80%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-skill" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="card-title">
-              <i class="fa-solid fa-users"></i> Soft Skills
-            </h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-solid fa-lightbulb"></i> Problem-solving</span>
-              <span class="skill-tag"><i class="fa-solid fa-crown"></i> Leadership</span>
-              <span class="skill-tag"><i class="fa-solid fa-comments"></i> Communication</span>
-              <span class="skill-tag"><i class="fa-solid fa-diagram-project"></i> Project
-                Management</span>
-              <span class="skill-tag"><i class="fa-solid fa-bullseye"></i> Self-discipline</span>
-              <span class="skill-tag"><i class="fa-solid fa-clock"></i> Time Management</span>
-              <span class="skill-tag"><i class="fa-solid fa-brain"></i> Critical Thinking</span>
-              <span class="skill-tag"><i class="fa-solid fa-user-tie"></i> Professionalness</span>
+            <h3 class="card-title"><i class="fa-solid fa-users"></i> Soft Skills</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-lightbulb"></i>
+                    Problem-solving</span><span>95%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-crown"></i> Leadership</span><span>85%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-comments"></i> Communication</span><span>90%</span>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-diagram-project"></i> Project
+                    Management</span><span>80%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-bullseye"></i>
+                    Self-discipline</span><span>95%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-clock"></i> Time Management</span><span>90%</span>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-brain"></i> Critical Thinking</span><span>90%</span>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-user-tie"></i>
+                    Professionalness</span><span>95%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-skill" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="card-title">
-              <i class="fa-solid fa-language"></i> Languages
-            </h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-solid fa-language"></i> English</span>
-              <span class="skill-tag"><i class="fa-solid fa-earth-asia"></i> Khmer (Native)</span>
+            <h3 class="card-title"><i class="fa-solid fa-language"></i> Languages</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-language"></i> English</span><span>85%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-earth-asia"></i> Khmer
+                    (Native)</span><span>100%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 100%;"></div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="card-skill" data-aos="fade-up" data-aos-delay="400">
-            <h3 class="card-title">
-              <i class="fa-solid fa-wrench"></i> Other Skills
-            </h3>
-            <div class="skill-tags">
-              <span class="skill-tag"><i class="fa-solid fa-file-word"></i> Microsoft Office</span>
-              <span class="skill-tag"><i class="fa-solid fa-chart-line"></i> Data Analysis</span>
-              <span class="skill-tag"><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</span>
-              <span class="skill-tag"><i class="fa-brands fa-windows"></i> Windows Dev</span>
-              <span class="skill-tag"><i class="fa-solid fa-person-chalkboard"></i>
-                Presentation</span>
+            <h3 class="card-title"><i class="fa-solid fa-wrench"></i> Other Skills</h3>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-file-word"></i> Microsoft
+                    Office</span><span>90%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-chart-line"></i> Data
+                    Analysis</span><span>70%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</span><span>75%</span>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-brands fa-windows"></i> Windows Dev</span><span>70%</span>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span><i class="fa-solid fa-person-chalkboard"></i>
+                    Presentation</span><span>85%</span></div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -444,13 +575,10 @@
         </div>
       </div>
     </section>
-    <!-- <p
-      data-aos="fade-up"
-      data-aos-duration="800"
-      data-aos-easing="ease-in-out"
-      data-aos-anchor-placement="top-center"
-    ></p> -->
-    <!-- <div class="layout-1">Wow</div> -->
+
+    <footer class="footer">
+      <p>&copy; 2026 Vyrak Sna. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
