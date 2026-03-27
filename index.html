@@ -21,7 +21,8 @@
   <div class="layout" id="home">
     <div class="header">
       <p>Portfolio</p>
-      <nav>
+      <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i>
+      <nav class="nav-menu">
         <ul class="navbar">
           <a href="#home">
             <li>Home</li>
@@ -456,6 +457,34 @@
 <script>
   AOS.init({
     once: true,
+  });
+
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.querySelector('.nav-menu');
+
+  function toggleMenu() {
+    navMenu.classList.toggle('active');
+    if (navMenu.classList.contains('active')) {
+      menuIcon.classList.remove('fa-bars');
+      menuIcon.classList.add('fa-times');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menuIcon.classList.remove('fa-times');
+      menuIcon.classList.add('fa-bars');
+      document.body.style.overflow = '';
+    }
+  }
+
+  menuIcon.addEventListener('click', toggleMenu);
+
+  // Close the menu when a link is clicked
+  const navLinks = document.querySelectorAll('.navbar a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
   });
 </script>
 
