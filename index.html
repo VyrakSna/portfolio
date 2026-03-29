@@ -559,20 +559,20 @@
           </div>
 
           <div class="contact-form-container" data-aos="fade-left" data-aos-delay="200">
-            <form class="contact-form">
+            <form class="contact-form" id="contact-form">
               <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
+                <input type="text" id="name" placeholder="Your Name" required />
               </div>
               <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
+                <input type="email" id="email" placeholder="Your Email" required />
               </div>
               <div class="form-group">
-                <input type="text" placeholder="Subject" required />
+                <input type="text" id="subject" placeholder="Subject" required />
               </div>
               <div class="form-group">
-                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
               </div>
-              <button type="submit" class="submit-btn">
+              <button type="submit" class="submit-btn" id="submit-btn">
                 Send Message <i class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
@@ -584,6 +584,14 @@
     <footer class="footer">
       <p>&copy; 2026 Vyrak Sna. All rights reserved.</p>
     </footer>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden">
+    <div class="toast-icon">
+      <i id="toast-icon-element" class="fa-solid fa-circle-check"></i>
+    </div>
+    <div class="toast-message" id="toast-message">Message sent successfully!</div>
   </div>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -618,6 +626,88 @@
         toggleMenu();
       }
     });
+  });
+
+  // Telegram Bot Integration
+  const contactForm = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const toast = document.getElementById('toast');
+  const toastMessage = document.getElementById('toast-message');
+  const toastIcon = document.getElementById('toast-icon-element');
+
+  // Helper to show toast
+  function showToast(message, type) {
+    toastMessage.textContent = message;
+
+    // Reset classes
+    toast.className = 'toast';
+    toastIcon.className = '';
+
+    if (type === 'success') {
+      toast.classList.add('toast-success');
+      toastIcon.className = 'fa-solid fa-circle-check';
+    } else {
+      toast.classList.add('toast-error');
+      toastIcon.className = 'fa-solid fa-circle-exclamation';
+    }
+
+    // Show toast
+    toast.classList.add('show');
+
+    // Hide toast after 4 seconds
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 4000);
+  }
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Change button text while sending
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+    submitBtn.disabled = true;
+
+    // TODO: Replace with your actual Telegram Bot Token and Chat ID
+    const botToken = '7808540343:AAEq_c473X_U3BSM-ofTyFKLmgwS6G3GOvs';
+    const chatId = '784362028';
+
+    // Get form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    // Format the message
+    const text = `📬 *New Message from Portfolio*\n\n*Name:* ${name}\n*Email:* ${email}\n*Subject:* ${subject}\n*Message:*\n${message}`;
+
+    try {
+      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: 'Markdown',
+        }),
+      });
+
+      if (response.ok) {
+        showToast('Message sent successfully!', 'success');
+        contactForm.reset();
+      } else {
+        showToast('Failed to send message. Please check your bot configuration.', 'error');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      showToast('An error occurred. Please try again later.', 'error');
+    } finally {
+      // Restore button text and enable
+      submitBtn.innerHTML = originalBtnText;
+      submitBtn.disabled = false;
+    }
   });
 </script>
 
