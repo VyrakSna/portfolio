@@ -815,6 +815,10 @@
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-XNG78CLDNQ"
   ></script>
+  <script type="module">
+    import { injectSpeedInsights } from 'https://unpkg.com/@vercel/speed-insights@2.0.0/dist/index.mjs';
+    injectSpeedInsights();
+  </script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
